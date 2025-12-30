@@ -301,7 +301,7 @@ export default function SideBar({ toggleSidebar }) {
                 </span>
               </NavLink>
             </li>
-            {/* meetings join */}
+            {/* meetings join 
             <li
               hidden={dataUser.allowToCreateMeeting}
               onClick={handleClick}
@@ -332,6 +332,9 @@ export default function SideBar({ toggleSidebar }) {
                 </span>
               </NavLink>
             </li>
+            */}
+
+            
             {/* incomeUniversity 
             <li onClick={handleClick} className="nav-item">
               <NavLink className="nav-link link-dashboard " to="university">
