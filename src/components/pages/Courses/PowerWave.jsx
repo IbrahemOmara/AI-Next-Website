@@ -27,15 +27,7 @@ export default function PowerWave() {
         </Button>
 
         <Card className="shadow p-4 course-card-details">
-          <Card.Img
-            variant="top"
-            src={
-              
-              planPic
-            }
-            alt="PowerWave"
-            className="mb-3 rounded custom-course-image"
-          />
+          
           <Card.Body>
             <Card.Title className="fs-3 mb-3" style={{textAlign:"center"}}>Power Wave</Card.Title>
             <Card.Text style={{ whiteSpace: "pre-line",textAlign:"right"}}>
@@ -81,6 +73,15 @@ export default function PowerWave() {
                   to={"/contact-us"}
                 />
           </Card.Body>
+          <Card.Img
+            variant="top"
+            src={
+              
+              planPic
+            }
+            alt="PowerWave"
+            className="mb-3 rounded custom-course-image"
+          />
         </Card>
       </div>
     </div>

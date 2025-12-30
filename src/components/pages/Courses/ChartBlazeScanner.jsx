@@ -27,15 +27,7 @@ export default function ChartBlazeScanner() {
         </Button>
 
         <Card className="shadow p-4 course-card-details">
-          <Card.Img
-            variant="top"
-            src={
-              
-              planPic
-            }
-            alt=" ChartBlazeScanner"
-            className="mb-3 rounded custom-course-image"
-          />
+          
           <Card.Body>
             <Card.Title className="fs-3 mb-3" style={{textAlign:"center"}}> ChartBlaze Scanner</Card.Title>
             <Card.Text style={{ whiteSpace: "pre-line",textAlign:"right"}}>
@@ -89,6 +81,16 @@ export default function ChartBlazeScanner() {
                   to={"/contact-us"}
                 />
           </Card.Body>
+
+          <Card.Img
+            variant="top"
+            src={
+              
+              planPic
+            }
+            alt=" ChartBlazeScanner"
+            className="mb-3 rounded custom-course-image"
+          />
         </Card>
       </div>
     </div>
