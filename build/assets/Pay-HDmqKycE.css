@@ -1,0 +1,1 @@
+#pay{display:flex;align-items:center;justify-content:center;height:100vh}#pay h1{font-size:clamp(1rem,5vw,3.2rem)}.btn-pay{background-color:var(--secondColorDark);border:solid 1px var(--secondColor);color:var(--secondColor)}.btn-pay:hover{scale:1.01;background-color:var(--secondColor)!important}
