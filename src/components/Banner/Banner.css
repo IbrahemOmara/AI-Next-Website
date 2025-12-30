@@ -1,0 +1,160 @@
+/* السلايدر بالكامل */
+
+.content-banner {
+  padding-top: 0px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+}
+.bg-gif {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) blur(2px) saturate(120%);
+}
+.main-banner {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.banner-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* هذا هو المفتاح لتفعيل الـ parallax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-position 0.4s ease-out;
+}
+
+.banner-content {
+  width: 70% !important;
+  margin: 0 auto;
+  z-index: 2;
+  animation: fadeIn 1.2s ease;
+}
+
+.banner-heading {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.banner-text {
+  font-size: 1.25rem;
+  color: #eee;
+}
+
+.banner-btn {
+  color:var(--mainColor) !important;
+  transition: background-color 0.3s;
+  padding: 10px 40px;
+  margin: 10px 0;
+  font-weight: 600;
+  border: solid 3px var(--mainColor);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+  background-color: var(--mainColor) !important;
+  color: var(--secondColor) !important;
+  transform: scale(1.05);
+}
+
+.main-banner-2{
+  width: 50%;
+}
+.main-banner-2 img{
+  height: 100%;
+  width:100%;
+}
+
+@media (max-width: 768px) {
+  .banner-heading {
+    font-size: 2rem;
+  }
+  .banner-text {
+    font-size: 1rem;
+  }
+}
+
+
+.banner-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--secondColorLight);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text {
+  font-size: 1.25rem;
+  color: var(--text-color-light);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-heading {
+    font-size: 2rem;
+  }
+  .banner-slide{
+    height: 40vh;
+  }
+  .content-banner{
+    flex-direction: column;
+  }
+
+  .main-banner {
+    width: 100%;
+  }
+  .main-banner-2{
+    width: 100%;
+    height: 50vh;
+  }
+  .main-banner-2 img{
+    width: 100%;
+  }
+  .banner-text {
+    font-size: 1rem;
+  }
+
+  .banner-btn {
+    font-size: 0.9rem;
+  }
+}
+.progress-container {
+  height: 6px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--mainColor);
+  transition: width 0.1s linear;
+}

@@ -1,0 +1,28 @@
+
+.header-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--mainColor);
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+    width: 100%;
+    background-color: var(--secondColorDark);
+}
+
+.img-profile-dashboard {
+    width: 40px;
+    height: 40px;
+    padding-right: 100px;
+}
+
+.img-profile-dashboard img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}

@@ -1,0 +1,54 @@
+.hero-section {
+  background: linear-gradient(#39383874, rgb(255, 255, 255))!important;
+  padding: 80px 0;
+  font-family: var(--font-family);
+  color: #fff;
+  background-color: #fff;
+}
+
+.hero-section h1 {
+  font-family: "Almarai-ExtraBold";
+  font-size: 3rem;
+  color: var(--mainColorLight);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section p.lead {
+  color: var(--secondColor);
+  font-family: "Almarai-Light";
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section p:not(.lead) {
+  color: var(--secondColor);
+  font-family: "Almarai-Light";
+  font-size: 1.6rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 1.1rem;
+  }
+
+  .hero-section p:not(.lead) {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,51 @@
+.content-section {
+  padding-top: 100px;
+}
+.contact-section h2 {
+  color: var(--mainColor) !important;
+}
+.contact-section {
+  background-color: #fff;
+}
+
+.contact-info {
+  background: var(--btnBgColor);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h5 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--secondColorDark);
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+form label {
+  font-weight: 600;
+  color: var(--secondColorDark);
+}
+
+form .form-control {
+  border-radius: 8px;
+  border: solid 1px var(--secondColor);
+}
+
+.contact-section form button {
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px 0;
+  color: var(--secondColorDark) !important;
+  background-color: var(--btnBgColor) !important;
+}
+
+.contact-section form button:hover {
+  background-color: var(--secondColorDark) !important;
+  color: var(--secondColorLight) !important;
+}

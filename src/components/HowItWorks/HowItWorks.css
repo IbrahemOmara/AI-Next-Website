@@ -1,0 +1,89 @@
+/* 📁 src/components/home/HowItWorks.css */
+
+.how-it-works-section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.forex-cross-wrapper{
+  width: 50%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+}
+.forex-cross-wrapper span{
+  color: var(--secondColorDark);
+  font-size: 2.2rem;
+}
+.forex-cross-wrapper h1{
+  color: var(--mainColor);
+  font-weight: 600;
+}
+.section-title-head {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+  /* color: var(--secondColorDark); */
+  color: var(--secondColorDark) !important;
+}
+.how-container{
+  width: 50%;
+}
+.how{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.how-card {
+  background-color:#ffffff3d;
+  border-radius: 100px;
+  border: solid 1px var(--mainColor);
+  box-shadow: 0 8px 20px rgba(var(--mainColorRgb), 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  border: solid 1px var(--secondColorDark);
+  box-shadow: 0 12px 24px rgba(var(--mainColorRgb), 0.15);
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+.how-card img{
+  height: 80px;
+  width: 80px;
+}
+.how-icon {
+  font-size: 2.8rem;
+  color: var(--mainColor);
+  margin-bottom: 10px;
+}
+
+.how-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-color-dark);
+}
+
+.how-desc {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+@media (max-width: 700px) {
+.how-it-works-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.forex-cross-wrapper{
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+}

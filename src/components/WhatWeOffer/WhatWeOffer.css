@@ -1,0 +1,158 @@
+/* 📁 src/components/home/WhatWeOffer.css */
+
+
+.offer-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--secondColorDark) !important;
+}
+
+/* لازم تضيفي المنظور على الحاوية */
+.offer-section {
+  perspective: 1200px;
+  background-color: #fff;
+}
+
+/* كروت العروض */
+.offer-section .offer-card {
+  background-color: #ffffff;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+  overflow: visible;
+
+  transform-style: preserve-3d;
+
+  transition: 
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.45s ease,
+    border 0.3s ease;
+
+  /* حركة الطفو */
+  animation: float3D 3.5s ease-in-out infinite;
+}
+
+/* ====== التوهج القوي أسفل الكارت ====== */
+.offer-section .offer-card::after {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(-60px);
+  width:80%;
+  height: 60px;
+
+  background: radial-gradient(
+    ellipse at center,
+    var(--mainColor)60%,
+    var(--secondColorDark) 30%
+  );
+
+  filter: blur(30px);
+  opacity: 0.5;
+  z-index: -2;
+
+  transition: 
+    opacity 0.4s ease,
+    filter 0.4s ease;
+}
+
+/* ====== ظل داخلي خفيف =========== */
+.offer-section .offer-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.08),
+    rgba(0,0,0,0.25)
+  );
+  z-index: -1;
+}
+
+/* ========== عند الـ Hover 3D ========== */
+.offer-section .offer-card:hover {
+  transform:
+    translateY(-28px)
+    rotateX(8deg)
+    rotateY(-8deg)
+    scale(1.05);
+
+  box-shadow:
+    0 35px 70px rgba(0,0,0,0.55),
+    0 0 40px var(--mainColor),
+    0 0 80px var(--mainColor);
+
+  border: none;
+  animation-play-state: paused;
+}
+
+.offer-section .offer-card:hover::after {
+  opacity: 1;
+  filter: blur(40px);
+    background: radial-gradient(
+    ellipse at center,
+    var(--secondColorRgb)50%,
+    rgba(242, 5, 5, 0.842) 80%
+  );
+}
+
+/* ========= حركة الطفو ثلاثية الأبعاد ========= */
+@keyframes float3D {
+  0% {
+    transform:
+      translateY(0)
+      rotateX(0deg)
+      rotateY(-2deg);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+  }
+
+  50% {
+    transform:
+      translateY(-16px)
+      rotateX(4deg)
+      rotateY(2deg);
+    box-shadow: 0 28px 55px rgba(0,0,0,0.5);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotateX(0deg)
+      rotateY(-2deg);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+  }
+}
+
+/* الأيقونة */
+.offer-icon {
+  font-size: 3rem;
+  color: var(--mainColor);
+}
+
+/* العنوان الفرعي */
+.offer-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-color-dark);
+}
+
+/* الوصف */
+.offer-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.offer-card img{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+
+}
