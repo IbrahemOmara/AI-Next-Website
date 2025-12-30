@@ -86,4 +86,10 @@
   align-items: center;
   text-align: center;
 }
+.how-container {
+  width: 100%;
+}
+.how-card{
+    width: 80%;
+}
 }

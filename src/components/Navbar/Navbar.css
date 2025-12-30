@@ -141,9 +141,7 @@ nav {
   .offcanvas {
     height: 100vh;
   }
-  nav{
-  background-color: #00000082;
-  }
+
   .logo{
     margin-left: 20px;
     height: 60px;

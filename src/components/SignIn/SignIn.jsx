@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import bg from "../../assets/Next-logo/gb5.png";
 import "../SignUp/SignUp.css";
-import logo from "../../assets/Next-logo/logo-noBG.png";
+import logo from "../../assets/Next-logo/logo-W-noBG.png";
 import { useFormik } from "formik";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";

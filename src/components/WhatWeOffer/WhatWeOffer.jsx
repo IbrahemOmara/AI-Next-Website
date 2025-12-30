@@ -31,11 +31,7 @@ const items = [
     desc: "",
     icon: icon4,
   },
-  {
-    title: "usiness-and-finance",
-    desc: "",
-    icon: icon3,
-  },
+
 ];
 
 const WhatWeOffer = () => (

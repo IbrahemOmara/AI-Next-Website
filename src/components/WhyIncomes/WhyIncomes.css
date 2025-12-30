@@ -56,3 +56,15 @@
   font-weight: 500;
   color: var(--secondColor) !important;
 }
+
+
+@media (max-width: 700px) {
+  .why-card {
+    height: 350px;
+    width: 80%;
+  }
+.why-card img{
+  height: 100px;
+  width: 100px;
+}
+}
