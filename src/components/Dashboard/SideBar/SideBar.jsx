@@ -4,6 +4,7 @@ import logo from "../../../assets/Next-logo/2.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../../context/storeContext";
 
+
 export default function SideBar({ toggleSidebar }) {
   const dataUser = JSON.parse(localStorage.dataAuth);
   const { titlePageDashbourd, setTitlePageDashbourd } =
@@ -35,6 +36,8 @@ export default function SideBar({ toggleSidebar }) {
     handleResize();
   }, []);
 
+
+
   return (
     <>
       <div className={`sidebar pt-3`} id="sidebar">
@@ -61,7 +64,7 @@ export default function SideBar({ toggleSidebar }) {
                 <span className="d-md-block"> Home</span>
               </NavLink>
             </li>
-            {/* My Holding Tank */}
+            {/* My Holding Tank 
             <li onClick={handleClick} className="nav-item">
               <NavLink className="nav-link link-dashboard " to="holding-tank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -81,13 +84,19 @@ export default function SideBar({ toggleSidebar }) {
                 <span className=" d-md-block"> My Holding Tank</span>
               </NavLink>
             </li>
-            {/* My Holding Tank */}
+              */}
+
+
+            {/* My Holding Tank 
             <li onClick={handleClick} className="nav-item">
               <NavLink className="nav-link link-dashboard " to="my-tree">
                 <i className="fa-solid fa-folder-tree"></i>
                 <span className=" d-md-block"> NetWork Tree</span>
               </NavLink>
             </li>
+              */}
+
+
             {/* live trading ns */}
             <li
               hidden={!dataUser.ns_balance}
@@ -188,6 +197,7 @@ export default function SideBar({ toggleSidebar }) {
             </li>
             {/* My Wallet */}
             <li
+              
               hidden={!dataUser.ns_balance}
               onClick={handleClick}
               className="nav-item"
@@ -205,6 +215,7 @@ export default function SideBar({ toggleSidebar }) {
                 </span>
               </NavLink>
             </li>
+            
             {/* Events 
             <li onClick={handleClick} className="nav-item">
               <NavLink className="nav-link link-dashboard " to="events">
@@ -385,6 +396,7 @@ export default function SideBar({ toggleSidebar }) {
                 </span>
               </NavLink>
             </li>. */}
+
             {/* My Business 
             <li onClick={handleClick} className="nav-item">
               <NavLink className="nav-link link-dashboard" to="my-business">
@@ -404,6 +416,8 @@ export default function SideBar({ toggleSidebar }) {
                 <span className="d-md-block"> My Business</span>
               </NavLink>
             </li> */}
+
+
             {/* My Reports */}
             <li onClick={handleClick} className="nav-item">
               <NavLink className="nav-link link-dashboard" to="my-reports">
@@ -430,7 +444,7 @@ export default function SideBar({ toggleSidebar }) {
                 <span className="d-md-block">My Orders</span>
               </NavLink>
             </li>
-            {/* Transfer */}
+            {/* Transfer 
             <li onClick={handleClick} className="nav-item">
               <NavLink className="nav-link link-dashboard " to="transfer">
                 <svg
@@ -449,6 +463,9 @@ export default function SideBar({ toggleSidebar }) {
                 <span className="d-md-block">Transfer</span>
               </NavLink>
             </li>
+              */}
+
+
             {/* My Profile */}
             <li onClick={handleClick} className="nav-item">
               <NavLink className="nav-link link-dashboard " to="my-account">

@@ -24,12 +24,16 @@ export default function MyWallet() {
       .get(`${baseURL}/User/GetYourBalance?userId=${id}`)
       .then(({ data }) => {
         typeof data === "string" ? setBalance({ remain: 0 }) : setBalance(data);
+        
       })
+      
       .catch((error) => {
         setBalance({ remain: 0 });
         toast.warning("You dont have any balance");
       });
   }
+
+
 
   function requestToken(values) {
     axios

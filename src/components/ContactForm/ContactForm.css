@@ -1,0 +1,11 @@
+input, textarea, select {
+width: 100%;
+margin-bottom: 8px;
+padding: 10px;
+
+}
+
+.form-contact{
+    display: flex;
+    flex-direction: column;
+}

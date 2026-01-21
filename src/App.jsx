@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 
+import FloatingContact from "./components/FloatingContact/FloatingContact";
 import TradingCanvas from './components/CanvasTrading'
 import NotFound from "./components/NotFound/NotFound";
 import MainLayout from "./Layouts/MainLayout";
@@ -706,6 +707,7 @@ function App() {
 
       <StoreContextProvider>
         <RouterProvider router={routes} />
+        <FloatingContact />
       </StoreContextProvider>
     </>
   );
