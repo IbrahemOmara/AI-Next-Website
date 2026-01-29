@@ -18,11 +18,11 @@ const formik = useFormik({
     },
 
     validationSchema: Yup.object({
-    name: Yup.string().required("الاسم مطلوب"),
-    email: Yup.string().email("إيميل غير صحيح").required("الإيميل مطلوب"),
-    country: Yup.string().required("الدولة مطلوبة"),
-    phone: Yup.string().required("رقم الهاتف مطلوب"),
-    message: Yup.string().required("الرسالة مطلوبة"),
+    name: Yup.string().required("Name Required"),
+    email: Yup.string().email("Invalid email address").required("Email is required"),
+    country: Yup.string().required("Country is required"),
+    phone: Yup.string().required("Phone number is required"),
+    message: Yup.string().required("Message is required"),
     }),
 
     onSubmit: async (values, { resetForm }) => {
@@ -38,9 +38,9 @@ const formik = useFormik({
 
         resetForm();
         onSuccess && onSuccess();
-        alert("تم الإرسال بنجاح ✅");
+        alert("Message was send successfully ✅");
     } catch (error) {
-        alert("حصل خطأ أثناء الإرسال ❌");
+        alert("An error occurred while sending the message ❌");
         console.error(error);
     } finally {
         setLoading(false);
@@ -49,10 +49,12 @@ const formik = useFormik({
 });
 
 return (
+    
     <form onSubmit={formik.handleSubmit} className="form-contact">
+        <h2 className="m-2">Contact Us</h2>
     <input
         className="form-control"
-        placeholder="الاسم"
+        placeholder="Name"
         {...formik.getFieldProps("name")}
     />
     {formik.touched.name && formik.errors.name && (
@@ -61,7 +63,7 @@ return (
 
     <input
         className="form-control"
-        placeholder="الإيميل"
+        placeholder="Email"
         {...formik.getFieldProps("email")}
     />
     {formik.touched.email && formik.errors.email && (
@@ -82,10 +84,10 @@ return (
         formik.setFieldValue("phone", c ? c.code : "");
         }}
     >
-        <option value="">الدولة</option>
+        <option value="">Select Country</option>
         {countries.map((c, i) => (
-        <option key={i} value={c.name_en}>
-            {c.name_ar}
+        <option key={i} value={c.name_ar}>
+            {c.name_en}
         </option>
         ))}
     </select>
@@ -95,7 +97,7 @@ return (
 
     <input
         className="form-control"
-        placeholder="رقم الهاتف"
+        placeholder="Phone Number"
         {...formik.getFieldProps("phone")}
     />
     {formik.touched.phone && formik.errors.phone && (
@@ -104,7 +106,7 @@ return (
 
     <textarea
         className="form-control"
-        placeholder="الرسالة"
+        placeholder="Message"
         {...formik.getFieldProps("message")}
     />
     {formik.touched.message && formik.errors.message && (
@@ -116,7 +118,7 @@ return (
         className="btn btn-warning"
         disabled={loading}
     >
-        {loading ? "جاري الإرسال..." : "إرسال"}
+        {loading ? "Sending..." : "Send"}
     </button>
     </form>
 );

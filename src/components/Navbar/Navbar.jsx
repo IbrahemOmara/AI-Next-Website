@@ -155,7 +155,7 @@ export default function Navbar() {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      Plans
+                      Ai Signal
                     </button>
                     <ul className="dropdown-menu  shadow " style={{backgroundColor:"#0a395c"}}>
                       

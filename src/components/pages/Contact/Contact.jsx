@@ -19,13 +19,13 @@ const Contact = () => {
     },
 
     validationSchema: Yup.object({
-      name: Yup.string().required("الاسم مطلوب"),
+      name: Yup.string().required("Name is required"),
       email: Yup.string()
-        .email("إيميل غير صحيح")
-        .required("الإيميل مطلوب"),
-      country: Yup.string().required("الدولة مطلوبة"),
-      phone: Yup.string().required("رقم الهاتف مطلوب"),
-      message: Yup.string().required("الرسالة مطلوبة"),
+        .email("Invalid email address")
+        .required("Email is required"),
+      country: Yup.string().required("Country is required"),
+      phone: Yup.string().required("Phone number is required"),
+      message: Yup.string().required("Message is required"),
     }),
 
     onSubmit: async (values, { resetForm }) => {
@@ -39,10 +39,10 @@ const Contact = () => {
           "cfo9mAk7YvLnJvgAN"
         );
 
-        alert("تم إرسال الرسالة بنجاح ✅");
+        alert("Message was send successfully ✅");
         resetForm();
       } catch (error) {
-        alert("حصل خطأ أثناء الإرسال ❌");
+        alert("An error occurred while sending the message ❌");
         console.error(error);
       } finally {
         setLoading(false);
